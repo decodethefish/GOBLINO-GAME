@@ -1,0 +1,92 @@
+enum FortinState {
+	LOBBY,
+	TEAM_SELECT,
+	BUILD,
+	BATTLE,
+	RESULTS,
+}
+
+enum FortinTeam {
+	DEFENDERS,
+	GOBLINS,
+}
+
+enum ConstructionType {
+	WALL,
+	LADDER,
+	TOWER,
+	GUN,
+	SOLDIER,
+	TRAP,
+}
+
+enum TroopMovementType {
+	GROUND,
+	AIR
+}
+
+enum ConstructionClass {
+	C,
+	B,
+	A,
+}
+
+enum TroopState {
+	IDLE,
+	THINK,
+	MOVE_TO_TARGET,
+	ATTACK,
+	DEAD,
+}
+
+enum FortinNetMsg {
+	JOIN = 1,
+	ASSIGN = 2,
+	JOIN_DENIED = 3,
+	TEAM_CHANGE_REQUEST = 4,
+	TEAM_CHANGE = 5,	
+	CURSOR = 6,
+	BUDGET_UPDATE = 7,
+	BUILD_REQUEST = 8,
+	BUILD_STRUCTURE = 9,
+	PLAYER_STATE = 10,
+	DELETE_REQUEST = 11,
+	DELETE_STRUCTURE = 12,
+	START_BUILD = 13,
+	START_BATTLE = 14,
+	PLAYER_DAMAGE = 15,
+	BATTLE_END = 16,
+	READY_FOR_BUILD = 17,
+	TROOP_SNAPSHOT = 18,
+	DAMAGE_STRUCTURE = 19,
+	DAMAGE_TROOP = 20,
+	PLAYER_LEFT = 21,
+}
+
+enum BuildTool {
+	NONE,
+	WALL,
+	STAIR,
+	TOWER,
+	SOLDIER,
+	SNIPER,
+	ENGINEER,
+	DELETE,
+	VENOM,
+	SPIKES,
+}
+
+enum PathCell { 
+	AIR, 
+	WALL, 
+	STAIR, 
+	VAULT 
+}
+	
+enum PathEdge { 
+	WALK, 
+	JUMP, 
+	DROP, 
+	BREAK, 
+	NONE 
+}
